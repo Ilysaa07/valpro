@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://valprointertech.com/sitemap.xml
