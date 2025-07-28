@@ -2,6 +2,7 @@ import { Instagram, Facebook, Music2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import LogoNav from "../assets/footer.png";
+import LazyImage from "./LazyImage";
 
 export default function Footer() {
   return (
@@ -10,9 +11,9 @@ export default function Footer() {
         {/* Left Side - Logo and Description */}
         <div className="md:w-1/2 space-y-4">
           <div className="">
-            <img
+            <LazyImage
             src={LogoNav}
-            alt="Valpro Intertech Logo"
+            alt="Logo Valpro Intertech - Konsultan Legalitas dan Perizinan Usaha Terpercaya di Bandung"
             className="h-10 w-auto object-contain"
           />
           </div>

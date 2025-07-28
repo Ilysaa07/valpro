@@ -343,7 +343,7 @@ const ChatBot = () => {
                 <p className="text-xs text-gray-400 mt-2 text-center">
                   Jika Anda memiliki pertanyaan yang tidak terjawab atau
                   ingin mendapatkan bantuan lebih lanjut, silakan{" "}
-                  <a href="https://wa.me/6281399710085" target="_blank" rel="noreferrer" className="text-[#253994]">hubungi kami lewat WhatsApp</a>.
+                  <a href="https://wa.me/6281399710085" target="_blank" rel="noopener noreferrer" className="text-[#253994]">hubungi kami lewat WhatsApp</a>.
                 </p>
               </div>
             </>

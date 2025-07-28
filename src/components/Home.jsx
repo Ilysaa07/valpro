@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { CheckCircle } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
-import HeroSVG from "../assets/home.svg"; // Ganti sesuai path kamu
+import HeroSVG from "../assets/home.svg"; 
+import LazyImage from "./LazyImage";
 
 export default function HeroSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -43,7 +44,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
           className="w-full md:w-1/2 text-center md:text-left space-y-5"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#253994] leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#253994] leading-tight h-30 mt-10">
             <TypeAnimation
               sequence={[
                 "Solusi Legalitas Terpercaya",
@@ -59,7 +60,7 @@ export default function HeroSection() {
             />
           </h1>
 
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 ">
             Fondasi hukum yang kuat adalah kunci pertumbuhan usaha. Kami hadir
             untuk menyederhanakan proses legalitas dan perizinan agar Anda bisa
             fokus mengembangkan bisnis.
@@ -108,9 +109,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full md:w-1/2 flex justify-center"
         >
-          <img
+          <LazyImage
             src={HeroSVG}
-            alt="Ilustrasi Legalitas"
+            alt="Ilustrasi konsultan legalitas dan perizinan usaha - Valpro Intertech membantu pendirian PT, CV, dan pengurusan izin usaha di Bandung"
             className="w-full max-w-sm sm:max-w-md md:max-w-lg"
           />
         </motion.div>

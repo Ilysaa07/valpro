@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ProfileImage from "../assets/profil.svg";
+import LazyImage from "./LazyImage";
 
 export default function Profil() {
   const [activeTab, setActiveTab] = useState("tentang");
@@ -63,14 +64,17 @@ export default function Profil() {
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center z-10 relative">
         {/* Image */}
-        <motion.img
-          src={ProfileImage}
-          alt="Profil"
-          className="w-full max-w-md mx-auto"
+        <motion.div
           initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-        />
+        >
+          <LazyImage
+            src={ProfileImage}
+            alt="Profil perusahaan Valpro Intertech - konsultan legalitas dan perizinan usaha terpercaya di Bandung dengan pengalaman lebih dari 10 tahun"
+            className="w-full max-w-md mx-auto"
+          />
+        </motion.div>
 
         {/* Content */}
         <motion.div

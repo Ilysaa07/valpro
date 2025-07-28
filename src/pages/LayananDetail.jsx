@@ -4,6 +4,7 @@ import layananData from "../data/layananData";
 import { CheckCircle, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
+import SEOHelmet from "../components/SEOHelmet";
 
 export default function LayananDetail() {
   const { slug } = useParams();
@@ -20,7 +21,29 @@ export default function LayananDetail() {
   const Icon = layanan.icon;
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-white to-blue-50 py-20 px-6 md:px-16 text-gray-800">
+    <>
+      <SEOHelmet 
+        title={`${layanan.title} | Valpro Intertech - Konsultan Legalitas Bandung`}
+        description={`${layanan.description.substring(0, 150)}...`}
+        canonical={`https://valprointertech.com/layanan/${slug}`}
+        ogUrl={`https://valprointertech.com/layanan/${slug}`}
+        ogTitle={`${layanan.title} | Valpro Intertech`}
+        ogDescription={`${layanan.description.substring(0, 150)}...`}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": layanan.title,
+          "description": layanan.description,
+          "provider": {
+            "@type": "Organization",
+            "name": "Valpro Intertech",
+            "url": "https://valprointertech.com"
+          },
+          "url": `https://valprointertech.com/layanan/${slug}`,
+          "serviceType": "Business Consulting"
+        }}
+      />
+      <section className="min-h-screen bg-gradient-to-br from-white to-blue-50 py-20 px-6 md:px-16 text-gray-800">
       <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden md:flex">
         {/* Left Icon Panel */}
         <div className="bg-blue-100 md:w-1/3 p-10 flex flex-col items-center justify-center">
@@ -102,5 +125,6 @@ export default function LayananDetail() {
         </div>
       </div>
     </section>
+    </>
   );
 }

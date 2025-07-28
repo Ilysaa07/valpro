@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import LogoNav from "../assets/logonav.png";
+import LazyImage from "./LazyImage";
 
 const layananList = [
   { title: "Pendirian Badan Usaha", slug: "pendirian-badan-usaha" },
@@ -49,9 +50,9 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img
+            <LazyImage
               src={LogoNav}
-              alt="Valpro Logo"
+              alt="Logo Valpro Intertech - Konsultan Legalitas dan Perizinan Usaha Bandung"
               className="h-12 sm:h-14 w-auto max-h-16 object-contain"
             />
           </Link>

@@ -21,6 +21,9 @@ import Client6 from "../assets/logo-client6.png";
 import Client7 from "../assets/logo-client7.png";
 import Client8 from "../assets/logo-client8.jpeg";
 import Client9 from "../assets/logo-client9.png";
+import Ban1 from "../assets/bannerclient.png"
+import Ban2 from "../assets/bannerclient2.png"
+import Ban3 from "../assets/bannerclient3.png";
 
 const features = [
   {
@@ -63,43 +66,43 @@ const features = [
 
 const testimonials = [
   {
-    name: "Endang Syuhada",
-    company: "PT. MAJU KARYA BHAKTI UTOMO",
+    //name: "Endang Syuhada",
+    //company: "PT. MAJU KARYA BHAKTI UTOMO",
     role: "CEO",
     content:
       "Pelayanan yang sangat profesional dan cepat. Dalam 2 minggu semua dokumen perizinan kami sudah selesai. Highly recommended!",
     rating: 5,
-    avatar: <img src={Client8} alt="" className="w-full h-full object-cover rounded-full" />,
+    //avatar: <img src={Client8} alt="" className="w-full h-full object-cover rounded-full" />,
     industry: "Konstruksi",
   },
   {
-    name: "Irham Tolinggi",
-    company: "CV. GIGATAMA GROUP",
+    //name: "Irham Tolinggi",
+    //company: "CV. GIGATAMA GROUP",
     role: "Direktur",
     content:
       "Tim yang sangat responsif dan transparan. Mereka selalu update progress dan menjelaskan setiap tahapan dengan detail.",
     rating: 5,
-    avatar: <img src={Client2} alt="" className="w-full h-full object-cover rounded-full" />,
+    //avatar: <img src={Client2} alt="" className="w-full h-full object-cover rounded-full" />,
     industry: "Konstruksi",
   },
   {
-    name: "Kelvin Giovanni Arissaputra",
-    company: "PT. MULTI KREASINDO ABADI",
+    //name: "Kelvin Giovanni Arissaputra",
+    //company: "PT. MULTI KREASINDO ABADI",
     role: "Direktur",
     content:
       "Proses yang sangat mudah dan cepat. Tim sangat membantu dalam menjelaskan setiap persyaratan yang dibutuhkan.",
     rating: 5,
-    avatar: <img src={Client9} alt="" className="w-full h-full object-cover rounded-full" />,
+    //avatar: <img src={Client9} alt="" className="w-full h-full object-cover rounded-full" />,
     industry: "Konstruksi",
   },
   {
-    name: "Fian Sofian Supriadi",
-    company: "PT. ARTAJAYA KONSTRUKSI",
+    //name: "Fian Sofian Supriadi",
+    //company: "PT. ARTAJAYA KONSTRUKSI",
     role: "Direktur",
     content:
       "Kami sangat puas dengan layanan yang diberikan. Semua dokumen perizinan kami selesai tepat waktu dan tanpa kendala.",
     rating: 5,
-    avatar: <img src={Client5} alt="" className="w-full h-full object-cover rounded-full" />,
+    //avatar: <img src={Client5} alt="" className="w-full h-full object-cover rounded-full" />,
     industry: "Konstruksi",
   },
 ];
@@ -335,12 +338,11 @@ const WhyChooseUsSection = () => {
         </motion.div>
 
         {/* SECTION: MARQUEE CLIENT */}
-        <div className="py-12"> {/* Padding lebih besar */}
-          <Marquee gradient={false} speed={40}> {/* Matikan gradient dan atur kecepatan */}
-            <img src={BannerClient} alt="Client Logo" className="h-50 sm:h-50 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
-            <img src={BannerClient} alt="Client Logo" className="h-50 sm:h-50 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
-            <img src={BannerClient} alt="Client Logo" className="h-50 sm:h-50 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
-            <img src={BannerClient} alt="Client Logo" className="h-50 sm:h-50 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
+        <div className="py-1"> {/* Padding lebih besar */}
+          <Marquee gradient={false} speed={45}> {/* Matikan gradient dan atur kecepatan */}
+            <img src={Ban1} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100 mb-5" />
+            <img src={Ban2} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
+            <img src={Ban3} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
           </Marquee>
         </div>
       </div>
