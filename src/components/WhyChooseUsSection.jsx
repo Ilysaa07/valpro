@@ -11,7 +11,6 @@ import {
   ChevronRight,
 } from "lucide-react"; 
 import Marquee from "react-fast-marquee";
-import BannerClient from "../assets/bannerclient.png";
 import Client1 from "../assets/logo-client1.jpeg";
 import Client2 from "../assets/logo-client2.jpeg";
 import Client3 from "../assets/logo-client3.png";
@@ -24,6 +23,8 @@ import Client9 from "../assets/logo-client9.png";
 import Ban1 from "../assets/bannerclient.png"
 import Ban2 from "../assets/bannerclient2.png"
 import Ban3 from "../assets/bannerclient3.png";
+import Ban4 from "../assets/bannerclient4.png";
+import Ban5 from "../assets/bannerclient5.png";
 
 const features = [
   {
@@ -319,7 +320,7 @@ const WhyChooseUsSection = () => {
         </motion.div>
 
         {/* SECTION: TESTIMONIAL */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
           variants={{
@@ -335,14 +336,18 @@ const WhyChooseUsSection = () => {
             Apa Kata Klien Kami?
           </h3>
           <TestimonialCarousel testimonials={testimonials} />
-        </motion.div>
+        </motion.div> */}
 
         {/* SECTION: MARQUEE CLIENT */}
         <div className="py-1"> {/* Padding lebih besar */}
-          <Marquee gradient={false} speed={45}> {/* Matikan gradient dan atur kecepatan */}
-            <img src={Ban1} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100 mb-5" />
-            <img src={Ban2} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
-            <img src={Ban3} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 mx-8 opacity-70 hover:opacity-100" />
+          <Marquee gradient={false} speed={45}>
+            <img src={Ban1} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+            <img src={Ban2} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+            </Marquee>
+            <Marquee gradient={false} speed={45}> {/* Matikan gradient dan atur kecepatan */}
+            <img src={Ban3} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+            <img src={Ban4} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+            <img src={Ban5} alt="Client Logo" className="h-65 sm:h-65 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
           </Marquee>
         </div>
       </div>

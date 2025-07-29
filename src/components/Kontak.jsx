@@ -186,7 +186,8 @@ Terima kasih!`;
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                 Informasi Kontak
               </h3>
-              <div className="space-y-5">
+              <div className="space-y-5 ">
+               <a href="tel:+6281399710085">
                 <ContactInfo
                   Icon={Phone}
                   label="Telepon"
@@ -194,6 +195,8 @@ Terima kasih!`;
                   iconColor="text-green-600"
                   bgColor="bg-green-50"
                 />
+                </a>
+                 <a href="mailto:mail@valprointertech.com">
                 <ContactInfo
                   Icon={Mail}
                   label="Email"
@@ -201,6 +204,7 @@ Terima kasih!`;
                   iconColor="text-blue-600"
                   bgColor="bg-blue-50"
                 />
+                </a>
                 <ContactInfo
                   Icon={Clock}
                   label="Jam Operasional"

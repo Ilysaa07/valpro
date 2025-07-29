@@ -15,18 +15,18 @@ import SEOHelmet from "./components/SEOHelmet.jsx";
 // Halaman Detail
 import LayananDetail from "./pages/LayananDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import HiddenDataPage from "./pages/HiddenDataPage.jsx";
 
 function App() {
   return (
     <>
-      <Navbar />
-
       <Routes>
         {/* Halaman Utama */}
         <Route
           path="/"
           element={
             <>
+              <Navbar />
               <SEOHelmet 
                 title="Valpro Intertech | Konsultan Legalitas & Perizinan Usaha Bandung"
                 description="Valpro Intertech: Konsultan legalitas terpercaya di Bandung. Kami ahli dalam pendirian PT & CV, pengurusan izin usaha, sertifikasi ISO, dan konsultasi pajak. Percepat legalitas bisnis Anda bersama kami!"
@@ -91,10 +91,29 @@ function App() {
         />
 
         {/* Halaman Detail Layanan */}
-        <Route path="/layanan/:slug" element={<LayananDetail />} />
+        <Route 
+          path="/layanan/:slug" 
+          element={
+            <>
+              <Navbar />
+              <LayananDetail />
+            </>
+          } 
+        />
+        
+        {/* Halaman Tersembunyi Data SBU - TANPA NAVBAR */}
+        <Route path="datapemenuhanalat" element={<HiddenDataPage />} />
         
         {/* 404 Page */}
-        <Route path="*" element={<NotFound />} />
+        <Route 
+          path="*" 
+          element={
+            <>
+              <Navbar />
+              <NotFound />
+            </>
+          } 
+        />
       </Routes>
     </>
   );

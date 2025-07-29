@@ -112,7 +112,6 @@ export default function LayananDetail() {
           <HashLink
             smooth
             to="/#kontak"
-            className="block text-center w-full py-3 bg-[#253994] hover:bg-blue-800 text-white rounded-xl font-semibold transition duration-300"
           >
             <motion.button
               whileHover={{ scale: 1.02 }}
